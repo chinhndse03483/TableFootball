@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Main View View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="MainViewViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Chelsea-v-Swansea-City-Premier-League-1" translatesAutoresizingMaskIntoConstraints="NO" id="fHa-ih-eLn">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="200"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="200" id="XR9-xP-3Lu"/>
+                                </constraints>
+                            </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tzg-I0-Wkd" customClass="DZNSegmentedControl">
+                                <rect key="frame" x="0.0" y="200" width="375" height="100"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="tintColor" red="0.99823087450000003" green="0.37085354329999998" blue="0.37765282389999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="uTJ-lz-pdY"/>
+                                </constraints>
+                                <connections>
+                                    <action selector="didChangeSegment:" destination="BYZ-38-t0r" eventType="valueChanged" id="rdp-4h-zLu"/>
+                                </connections>
+                            </view>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="hNU-bp-MrE">
+                                <rect key="frame" x="0.0" y="300" width="375" height="367"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="ilT-L8-NRh"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="5aX-eb-dnK"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="fHa-ih-eLn" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="4oE-Uf-viF"/>
+                            <constraint firstItem="hNU-bp-MrE" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="AqZ-d3-XhA"/>
+                            <constraint firstAttribute="trailing" secondItem="hNU-bp-MrE" secondAttribute="trailing" id="BKK-Uw-cNn"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="hNU-bp-MrE" secondAttribute="bottom" id="GdE-aR-kFx"/>
+                            <constraint firstItem="tzg-I0-Wkd" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="Gnh-2l-MjL"/>
+                            <constraint firstItem="tzg-I0-Wkd" firstAttribute="top" secondItem="fHa-ih-eLn" secondAttribute="bottom" id="O9u-vE-Ux6"/>
+                            <constraint firstItem="fHa-ih-eLn" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="Ryc-Z6-Of5"/>
+                            <constraint firstAttribute="trailing" secondItem="fHa-ih-eLn" secondAttribute="trailing" id="Tvf-fr-4Mu"/>
+                            <constraint firstAttribute="trailing" secondItem="tzg-I0-Wkd" secondAttribute="trailing" id="fHv-6D-VVv"/>
+                            <constraint firstItem="hNU-bp-MrE" firstAttribute="top" secondItem="tzg-I0-Wkd" secondAttribute="bottom" id="lB9-ia-Le0"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="control" destination="tzg-I0-Wkd" id="IK7-fN-YMF"/>
+                        <outlet property="imgHeader" destination="fHa-ih-eLn" id="QOq-gK-fYz"/>
+                        <outlet property="tbv" destination="hNU-bp-MrE" id="SUp-Ou-93a"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="136.80000000000001" y="137.18140929535232"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Chelsea-v-Swansea-City-Premier-League-1" width="1200" height="630"/>
+    </resources>
+</document>
